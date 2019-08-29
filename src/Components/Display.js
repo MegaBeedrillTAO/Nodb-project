@@ -11,7 +11,7 @@ class Display extends Component{
             height: 0,
             gender: "",
             race: "",
-            class: ""
+            job: ""
         }
     }
 
@@ -31,7 +31,7 @@ class Display extends Component{
                 <Stat propName = "height" handleChange={this.handleChange}/>
                 <Stat propName = "gender" handleChange={this.handleChange}/>
                 <Stat propName = "race" handleChange={this.handleChange}/>
-                <Stat propName = "class" handleChange={this.handleChange}/>
+                <Stat propName = "job" handleChange={this.handleChange}/>
             </div>
         )
     }
