@@ -32,6 +32,7 @@ class Display extends Component{
                 <Stat propName = "gender" handleChange={this.handleChange}/>
                 <Stat propName = "race" handleChange={this.handleChange}/>
                 <Stat propName = "job" handleChange={this.handleChange}/>
+                <button className = "create">Create</button>
             </div>
         )
     }
