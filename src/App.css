@@ -31,3 +31,8 @@
 .statInput{
   font-size: 50px;
 }
+.character{
+  height: 50vh;
+  width: 50vw;
+  border: solid black 10px;
+}

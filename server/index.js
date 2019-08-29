@@ -4,9 +4,9 @@ const cc = require("./Controllers/characterController");
 
 app.use(express.json());
 
-app.put("/api/character", cc.putCharacter);
-app.get("/api/character", cc.getCharacter);
 app.post("/api/character", cc.postCharacter);
+app.get("/api/character", cc.getCharacter);
+app.put("/api/character", cc.putCharacter);
 app.delete("/api/character", cc.deleteCharacter);
 
 app.listen(5050, () => {

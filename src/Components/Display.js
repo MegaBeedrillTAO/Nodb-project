@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Stat from "./Stat";
+import Axios from "axios";
 
 class Display extends Component{
     constructor(){
@@ -22,6 +23,21 @@ class Display extends Component{
         })
         
     }
+    
+    submitChange = () =>{
+        Axios.post("/api/character", {
+            name: this.state.name,
+            age: this.state.age,
+            height: this.state.height,
+            gender: this.state.gender,
+            race: this.state.race,
+            job: this.state.job
+        })
+        .then((response) => {
+            this.props.updateSection()
+            this.props.updateCharacter(response.data)
+        })
+    }
 
     render(){
         return(
@@ -32,7 +48,7 @@ class Display extends Component{
                 <Stat propName = "gender" handleChange={this.handleChange}/>
                 <Stat propName = "race" handleChange={this.handleChange}/>
                 <Stat propName = "job" handleChange={this.handleChange}/>
-                <button className = "create">Create</button>
+                <button className = "create" onClick={this.submitChange}>Create</button>
             </div>
         )
     }
