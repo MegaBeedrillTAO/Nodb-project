@@ -25,6 +25,7 @@ class App extends Component {
       })
   }
   updateCharacter = character =>{
+    console.log(character);
     this.setState({character: character})
   }
   updateSection = () =>{
@@ -44,9 +45,10 @@ class App extends Component {
     let green = (Math.random() * 255) + 1;
     let blue = (Math.random() * 255) + 1;
     let characterMapped = this.state.character.map((el, index) => (
-      
+      console.log(el) ||
       <Character
         className = "character"
+        updateCharacter = {this.updateCharacter}
         key={index}
         name={el.name}
         age={el.age}
@@ -54,7 +56,7 @@ class App extends Component {
         gender={el.gender}
         race={el.race}
         job={el.job}
-
+        index={index}
       />
     ))
     console.log(this.state.character);

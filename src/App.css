@@ -36,3 +36,8 @@
   width: 50vw;
   border: solid black 10px;
 }
+li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

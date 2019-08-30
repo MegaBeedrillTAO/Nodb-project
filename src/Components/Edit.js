@@ -1,9 +1,13 @@
 import React from "react";
 
-function Edit(){
+function Edit(props){
     return (
         <div>
-            <button>Edit</button>
+            {props.editing === false ? <button onClick={props.showEdit}>Edit</button> : null}
+           
+
+
+            
         </div>
     )
 }

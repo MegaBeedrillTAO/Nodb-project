@@ -28,19 +28,22 @@ const postCharacter = (req, res) =>{
 }
 const putCharacter = (req, res) => {
     const{name, age, height, gender, race, job} = req.body;
-    character[0] = {
-        name: name || character.name,
-        age: age || character.age,
-        height: height || character.height,
-        gender: gender || character.gender,
-        race: race || character.race,
-        job: job || character.job
+   // const characterIndex = character.findIndex(el => el.id === req.params.id);
+    let myGuy = character[+req.params.id];
+    character[+req.params.id] = {
+        name: name || myGuy.name,
+        age: age || myGuy.age,
+        height: height || myGuy.height,
+        gender: gender || myGuy.gender,
+        race: race || myGuy.race,
+        job: job || myGuy.job
     }
     res.status(200).send(character);
 }
 
 const deleteCharacter = (req, res) => {
-    character.splice(0,1);
+    
+    character.splice(+req.params.id,1);
     res.status(200).send(character);
 }
 
