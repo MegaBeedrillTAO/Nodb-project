@@ -27,6 +27,7 @@
 .create{
   height: 60px;
   width: 100px;
+  font-size: 30px;
 }
 .statInput{
   font-size: 50px;
@@ -40,4 +41,13 @@ li{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+.character-box{
+  border: solid black 5px;
+  box-sizing: border-box;
+}
+.character-view{
+  border: solid black 5px;
+  overflow-y: auto;
+  width: 50vw;
 }

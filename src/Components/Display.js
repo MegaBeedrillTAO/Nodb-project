@@ -25,6 +25,7 @@ class Display extends Component{
     }
     
     submitChange = () =>{
+        
         Axios.post("/api/character", {
             name: this.state.name,
             age: this.state.age,

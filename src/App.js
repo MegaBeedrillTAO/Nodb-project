@@ -70,13 +70,15 @@ class App extends Component {
         : null
         }
       {this.state.section === "show" 
-        ? characterMapped 
+        ? <> <div className="character-view">{characterMapped} </div> 
+        <button onClick={this.updateSection} className="create">Back</button> </>
         : null
       }
      
       
     </div>
   );
+
 }
   
 }
