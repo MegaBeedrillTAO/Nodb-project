@@ -64,13 +64,13 @@ class App extends Component {
     <div className="App"
     style={{border: `30px solid rgb(${red}, ${green}, ${blue})`}}>
        
-      <h1>Create Your Character</h1>
+      <header><h1>Create Your Character</h1></header>
       {this.state.section === "create" 
         ?  <Display updateSection={this.updateSection} updateCharacter = {this.updateCharacter}/> 
         : null
         }
       {this.state.section === "show" 
-        ? <> <div className="character-view">{characterMapped} </div> 
+        ? <> <main className="character-view">{characterMapped} </main> 
         <button onClick={this.updateSection} className="create">Back</button> </>
         : null
       }

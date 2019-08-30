@@ -23,6 +23,9 @@ class Character extends Component{
    deleteCharacter = () =>{
     Axios.delete(`/api/character/${this.props.index}`)
     .then(response => this.props.updateCharacter(response.data))
+    .catch(err =>{
+        console.log(err);
+      })
    }
 
    editStat = () =>{
@@ -40,6 +43,9 @@ class Character extends Component{
             this.props.updateCharacter(response.data)
             this.hideEdit();
             })
+            .catch(err =>{
+                console.log(err);
+              })
    }
    updateName = (value) =>{
        this.setState({name: value})

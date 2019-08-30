@@ -1,23 +1,6 @@
 const Axios = require('axios');
 
-let character = [{
-    name: "Jake",
-    age: 21,
-    height: 34,
-    gender: "Male",
-    race: "Human",
-    job: "Coder"
-},
-{
-    name: "Eric",
-    age: 21,
-    height: 34,
-    gender: "Male",
-    race: "Human",
-    job: "Coder"
-}
-
-];
+let character = [];
 
 const getCharacter = (req, res) => {
     res.status(200).send(character); 
@@ -25,10 +8,6 @@ const getCharacter = (req, res) => {
 
 const postCharacter = (req, res) =>{
     const{name, age, height, gender, race, job} = req.body;
-    if (name === ""){
-        Axios.get("http://names.drycodes.com/2?randomCombined=true?")
-        .then(response => name = response.data)
-    }
     character.push({name, age, height, gender, race, job});
     res.status(200).send(character); 
 }
