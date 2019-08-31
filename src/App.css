@@ -23,6 +23,7 @@
   flex-direction: row;
   border: solid black 5px;
   justify-content: space-evenly;
+  background-color: white;
 }
 .create{
   height: 60px;
@@ -36,6 +37,7 @@
   height: 50vh;
   width: 50vw;
   border: solid black 10px;
+  
 }
 li{
   display: flex;
@@ -45,9 +47,11 @@ li{
 .character-box{
   border: solid black 5px;
   box-sizing: border-box;
+  background-color: white;
 }
 .character-view{
   border: solid black 5px;
   overflow-y: auto;
   width: 50vw;
 }
+

@@ -44,6 +44,9 @@ class App extends Component {
     let red = (Math.random() * 255) + 1;
     let green = (Math.random() * 255) + 1;
     let blue = (Math.random() * 255) + 1;
+    let red2 = (Math.random() * 255) + 1;
+    let green2 = (Math.random() * 255) + 1;
+    let blue2 = (Math.random() * 255) + 1;
     let characterMapped = this.state.character.map((el, index) => (
       console.log(el) ||
       <Character
@@ -62,7 +65,7 @@ class App extends Component {
     console.log(this.state.character);
     return (
     <div className="App"
-    style={{border: `30px solid rgb(${red}, ${green}, ${blue})`}}>
+    style={{border: `58px solid rgb(${red}, ${green}, ${blue})`, backgroundColor: `rgb(${red2}, ${green2}, ${blue2})`}}>
        
       <header><h1>Create Your Character</h1></header>
       {this.state.section === "create" 
